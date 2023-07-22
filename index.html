@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Kidney Anatomy</title>
+  <link rel="icon" href="images/kidney-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="images/kidney.png" class="kidney" alt="Interactive Image" id="interactive-image">
+      <div class="hotspot" style="top: 38px; left: 185px;" onclick="showInfo(1)"></div>
+      <div class="hotspot" style="top: 145px; left: 200px;" onclick="showInfo(2)"></div>
+      <div class="hotspot" style="top: 240px; left: 400px;" onclick="showInfo(3)"></div>
+      <div class="hotspot" style="top: 300px; left: 420px;" onclick="showInfo(4)"></div>
+      <div class="hotspot" style="top: 480px; left: 185px;" onclick="showInfo(5)"></div>
+    </div>
+    <div class="info" id="info-container">
+      <!-- Information for hotspots will be dynamically displayed here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
