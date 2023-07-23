@@ -42,3 +42,19 @@
 .kidney-right #ch2 a{
   color: lightseagreen;
 }
+
+.kidney-bottom img {
+  width: 100%;
+  border-radius: 50%;
+}
+.kidney-right {
+  gap: 3em; 
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+

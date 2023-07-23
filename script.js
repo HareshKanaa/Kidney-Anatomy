@@ -24,22 +24,36 @@ function showInfo(hotspotNumber) {
       </div>
   `;
   infoContainer.addEventListener('click', () => {
+    const possibleDiseases = hotspotsInfo[hotspotNumber].diseases.split(', ');
+
     const kidneyContainerBottom = document.getElementById('kidney-container-bottom');
     kidneyContainerBottom.innerHTML = `
       <div class="kidney-left kidney-bottom">
         <img src="${hotspotsInfo[hotspotNumber].imageLink}" alt="">
       </div>
       <div class="kidney-right">
-        <h1>${hotspotsInfo[hotspotNumber].title}</h1>
-        <h3>Description</h3>
-        <p>${hotspotsInfo[hotspotNumber].description}</p>
-        <h3>Function</h3>
-        <p>${hotspotsInfo[hotspotNumber].function}</p>
-        <h3>Possible Diseases</h3>
-        <p>${hotspotsInfo[hotspotNumber].diseases}</p>
-        
+        <div class="group">
+          <h1>${hotspotsInfo[hotspotNumber].title}</h1>
+          <h3>Description</h3>
+        </div>
+        <div class="group">
+          <p>${hotspotsInfo[hotspotNumber].description}</p>
+          <h3>Function</h3>
+        </div>
+        <div class="group">
+          <p>${hotspotsInfo[hotspotNumber].function}</p>
+          <h3 id="diseases">Possible Diseases</h3>
+        </div>
+
       </div>
     `;
+    const diseases = document.getElementById('diseases');
+    for(const disease of possibleDiseases) {
+      const diseaseElement = document.createElement('li');
+      diseaseElement.style = "font-weight: 500; font-size: 1.2rem;";
+      diseaseElement.innerHTML = disease;
+      diseases.appendChild(diseaseElement);
+    }
   });
 }
 

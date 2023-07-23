@@ -15,10 +15,6 @@ body {
   width: 500px;
   height: 550px;
 }
-.top {
-  background: linear-gradient(180deg, #ffffff 50%, #cdcdcd 100%);
-  position:relative;
-}
 .container {
   display: flex;
   justify-content: space-around;
@@ -27,6 +23,30 @@ body {
   gap: 10px;
   width: 100%;
 }
+.top {
+  background: linear-gradient(180deg, #ffffff 50%, #cdcdcd 100%);
+  position:relative;
+}
+
+.mid-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.mid-container .container {
+  justify-content: space-evenly;
+  gap: 6rem;
+}
+
+.mid-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: lightseagreen;
+}
+
 .bottom {
   background: linear-gradient(180deg, #f8eded 50%, #e8e8e8 100%);
   position: relative;
@@ -61,7 +81,7 @@ body {
 
 
 .top{
-  background: url('./svg/layered-peaks-haikei.svg');
+  background: url('./svg/stacked-waves-haikei.svg');
 }
 
 .mid {
@@ -78,27 +98,9 @@ body {
   background-position: center;
 }
 
-.mid-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.mid-container .container {
-  justify-content: space-around;
-  gap: 10rem;
-}
-
-.mid-title {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  color: lightseagreen;
-}
-
-
-.kidney-bottom img {
+footer {
   width: 100%;
-  border-radius: 50%;
+  background: url('svg/stacked-peaks-haikei.svg');
 }
+
+
