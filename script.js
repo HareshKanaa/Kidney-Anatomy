@@ -1,16 +1,32 @@
 import hotspotsInfo from "./hotspotsInfo.js";
 
 function showInfo(hotspotNumber) {
+  for(let i = 1; i < 6; i++) {
+    const hotspot = document.getElementsByClassName("hotspot")[i - 1];
+    if(i === hotspotNumber) {
+      hotspot.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+      hotspot.style.border = "2px solid white";
+    } else {
+      hotspot.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      hotspot.style.border = "2px solid black";
+    }
+  }
   const infoContainer = document.getElementById("info-container");
-  const infoTitle = document.getElementById("info-title");
-  const infoDescription = document.getElementById("info-description");
-  const infoImage = document.getElementById("info-image");
-  console.log(infoContainer, infoTitle, infoDescription, infoImage);
-  infoTitle.innerHTML = hotspotsInfo[hotspotNumber].title;
-  infoDescription.innerHTML = hotspotsInfo[hotspotNumber].description;
-  infoImage.src = hotspotsInfo[hotspotNumber].imageLink;
-  infoContainer.style.display = "block";
-  console.log(infoContainer, infoTitle, infoDescription, infoImage);
+  infoContainer.innerHTML = `
+      <div class="label-box" >
+        <div class="zoomed-img">
+          <img src="${hotspotsInfo[hotspotNumber].imageLink}" alt="" id="info-image">
+        </div>
+        <article class="label-body">
+          <span><h3 id="info-title">${hotspotsInfo[hotspotNumber].title}</h3></span>
+          <span><p id="info-description">${hotspotsInfo[hotspotNumber].description}</p></span>
+        </article>
+      </div>
+  `;
+  infoContainer.addEventListener('click', () => {
+    
+    window.open("https://en.wikipedia.org/wiki/Kidney", "_blank");
+  });
 }
 
 const imgContainer = document.getElementsByClassName("image-container")[0];

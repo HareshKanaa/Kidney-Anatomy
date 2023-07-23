@@ -1,0 +1,24 @@
+
+.kidney-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  height: 500px;
+}
+
+.kidney-left {
+  height: 100%;
+  width: 40%;
+}
+.kidney-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kidney-right {
+  height: 100%;
+  width: 50%;
+}
