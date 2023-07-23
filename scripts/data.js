@@ -36,4 +36,12 @@ const hotspotsInfo = {
     }
 };
 
-export default hotspotsInfo;
+const hotspotStyles = [
+  "top: 38px; left: 185px;",
+  "top: 145px; left: 200px;",
+  "top: 240px; left: 400px;",
+  "top: 300px; left: 420px;",
+  "top: 480px; left: 185px;"
+];
+
+export { hotspotsInfo, hotspotStyles };

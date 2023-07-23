@@ -81,15 +81,15 @@ body {
 
 
 .top{
-  background: url('./svg/stacked-waves-haikei.svg');
+  background: url('../svg/stacked-waves-haikei.svg');
 }
 
 .mid {
-  background: url('./svg/symbol-scatter-haikei.svg');
+  background: url('../svg/symbol-scatter-haikei.svg');
 }
 
 .bottom {
-  background: url('./svg/stacked-waves-haikei.svg');
+  background: url('../svg/stacked-waves-haikei.svg');
 }
 
 .top, .mid, .bottom, header, footer {
@@ -100,7 +100,7 @@ body {
 
 footer {
   width: 100%;
-  background: url('svg/stacked-peaks-haikei.svg');
+  background: url('../svg/stacked-peaks-haikei.svg');
 }
 
 

@@ -1,4 +1,4 @@
-import hotspotsInfo from "./hotspotsInfo.js";
+import {hotspotsInfo, hotspotStyles} from "./data.js";
 
 function showInfo(hotspotNumber) {
   for(let i = 1; i < 6; i++) {
@@ -24,37 +24,39 @@ function showInfo(hotspotNumber) {
       </div>
   `;
   infoContainer.addEventListener('click', () => {
-    const possibleDiseases = hotspotsInfo[hotspotNumber].diseases.split(', ');
-
-    const kidneyContainerBottom = document.getElementById('kidney-container-bottom');
-    kidneyContainerBottom.innerHTML = `
-      <div class="kidney-left kidney-bottom">
-        <img src="${hotspotsInfo[hotspotNumber].imageLink}" alt="">
-      </div>
-      <div class="kidney-right">
-        <div class="group">
-          <h1>${hotspotsInfo[hotspotNumber].title}</h1>
-          <h3>Description</h3>
-        </div>
-        <div class="group">
-          <p>${hotspotsInfo[hotspotNumber].description}</p>
-          <h3>Function</h3>
-        </div>
-        <div class="group">
-          <p>${hotspotsInfo[hotspotNumber].function}</p>
-          <h3 id="diseases">Possible Diseases</h3>
-        </div>
-
-      </div>
-    `;
-    const diseases = document.getElementById('diseases');
-    for(const disease of possibleDiseases) {
-      const diseaseElement = document.createElement('li');
-      diseaseElement.style = "font-weight: 500; font-size: 1.2rem;";
-      diseaseElement.innerHTML = disease;
-      diseases.appendChild(diseaseElement);
-    }
+    loadBottom(hotspotNumber);
   });
+}
+function loadBottom(hotspotNumber) {
+  const possibleDiseases = hotspotsInfo[hotspotNumber].diseases.split(', ');
+  const kidneyContainerBottom = document.getElementById('kidney-container-bottom');
+  kidneyContainerBottom.innerHTML = `
+    <div class="kidney-left kidney-bottom">
+      <img src="${hotspotsInfo[hotspotNumber].imageLink}" alt="">
+    </div>
+    <div class="kidney-right">
+      <div class="group">
+        <h1>${hotspotsInfo[hotspotNumber].title}</h1>
+        <h3>Description</h3>
+      </div>
+      <div class="group">
+        <p>${hotspotsInfo[hotspotNumber].description}</p>
+        <h3>Function</h3>
+      </div>
+      <div class="group">
+        <p>${hotspotsInfo[hotspotNumber].function}</p>
+        <h3 id="diseases">Possible Diseases</h3>
+      </div>
+
+    </div>
+  `;
+  const diseases = document.getElementById('diseases');
+  for(const disease of possibleDiseases) {
+    const diseaseElement = document.createElement('li');
+    diseaseElement.style = "font-weight: 500; font-size: 1.2rem;";
+    diseaseElement.innerHTML = disease;
+    diseases.appendChild(diseaseElement);
+  }
 }
 
 const imgContainer = document.getElementsByClassName("image-container")[0];
@@ -65,13 +67,6 @@ img.className = "kidney";
 
 imgContainer.appendChild(img);
 
-const hotspotStyles = [
-  "top: 38px; left: 185px;",
-  "top: 145px; left: 200px;",
-  "top: 240px; left: 400px;",
-  "top: 300px; left: 420px;",
-  "top: 480px; left: 185px;"
-];
 
 for(let i = 0; i < 5; i++) {
   console.log(i);
