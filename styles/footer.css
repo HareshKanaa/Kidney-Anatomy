@@ -1,0 +1,29 @@
+.mb-4 {
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.mb-4 > * {
+  background-color: #ffffff;
+  padding: 7.5px 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 100%;
+  color: rgb(164, 174, 170);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+.mb-4 > *:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-family: Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: 'Roboto', sans-serif;
+}
+.kidney { 
+  width: 500px;
+  height: 550px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+.top {
+  background: linear-gradient(180deg, #ffffff 50%, #cdcdcd 100%);
+  position:relative;
+}
+
+.mid-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.mid-container .container {
+  justify-content: space-evenly;
+  gap: 6rem;
+}
+
+.mid-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: lightseagreen;
+}
+
+.bottom {
+  background: linear-gradient(180deg, #f8eded 50%, #e8e8e8 100%);
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.hotspot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.info {
+  max-width: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.center {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+}
+
+
+
+.top{
+  background: url('../svg/stacked-waves-haikei.svg');
+}
+
+.mid {
+  background: url('../svg/symbol-scatter-haikei.svg');
+}
+
+.bottom {
+  background: url('../svg/stacked-waves-haikei.svg');
+}
+
+.top, .mid, .bottom, header, footer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  width: 100%;
+  background: url('../svg/stacked-peaks-haikei.svg');
+}
+
+

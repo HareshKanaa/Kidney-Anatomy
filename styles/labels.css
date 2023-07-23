@@ -39,12 +39,12 @@
   z-index: 1;
 }
 .label-body span h3 {
-  font-size: 100%;
+  font-size: 2rem;
   font-weight: 700;
   color: #000000;
 }
 .label-body span p {
-  font-size: 80%;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #000000;
   /* overflow is covered with ellipses */
@@ -52,12 +52,19 @@
   text-overflow: ellipsis;
   /* 2 lines of text */
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }
 .card {
-  width: 300px;
-  /* display: none; */
+  width: 350px;
+  position: cursor;
   aspect-ratio: 1/1;
+  margin-top: -100px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 /* Path: labels.css */
+
+.card:hover {
+  transform: scale(1.1);
+}
