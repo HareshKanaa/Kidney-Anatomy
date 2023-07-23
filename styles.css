@@ -1,22 +1,36 @@
 body {
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     font-family: Arial, sans-serif;
   }
-
-  .kidney {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-style: 'Roboto', sans-serif;
+  }
+  .kidney { 
     width: 500px;
     height: 550px;
   }
-  
+  .top {
+    background-color: red;
+    position: relative;
+  }
   .container {
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    background-color: #ffffff;
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  
+  .bottom {
+    background-color: blue;
+    position: relative;
+  }
+
   .image-container {
     position: relative;
   }
@@ -37,4 +51,9 @@ body {
     padding: 10px;
     display: none;
   }
-  
+
+  .center {
+    background-color: brown;
+    height: 100%;
+  }
+
