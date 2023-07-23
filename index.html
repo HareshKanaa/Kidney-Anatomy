@@ -7,78 +7,30 @@
   <link rel="icon" href="images/kidney-logo.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="labels.css">
+  <script type="module" src="./script.js"></script>
 </head>
+
+
 <body>
   <div class="top container"> 
 
   </div>
   <div class="mid container">
-
-    <section class="left">
-      <div class="card" id="label1">
-        <div class="label-box" >
-          <div class="zoomed-img">
-            <img src="https://picsum.photos/200" alt="">
-          </div>
-          <article class="label-body">
-            <span><h3>Label</h3></span>
-            <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p></span>
-          </article>    
-        </div>
-      </div>
-
-      <div class="card" id="label2">
-        <div class="label-box" >
-          <div class="zoomed-img">
-            <img src="https://picsum.photos/200" alt="">
-          </div>
-          <article class="label-body">
-            <span><h3>Label</h3></span>
-            <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p></span>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="center">
       <div class="image-container">
-        <img src="images/kidney.png" class="kidney" alt="Interactive Image" id="interactive-image">
-        <div class="hotspot" style="top: 38px; left: 185px;" onclick="showInfo(1)"></div>
-        <div class="hotspot" style="top: 145px; left: 200px;" onclick="showInfo(2)"></div>
-        <div class="hotspot" style="top: 240px; left: 400px;" onclick="showInfo(3)"></div>
-        <div class="hotspot" style="top: 300px; left: 420px;" onclick="showInfo(4)"></div>
-        <div class="hotspot" style="top: 480px; left: 185px;" onclick="showInfo(5)"></div>
-      </div>
-      <div class="info" id="info-container">
-        <!-- Information for hotspots will be dynamically displayed here -->
       </div>
     </section>
-
-    <section class="right">
-      <div class="card">
-        <div class="label-box" id="label3">
-          <div class="zoomed-img">
-            <img src="https://picsum.photos/200" alt="">
-          </div>
-          <article class="label-body">
-            <span><h3>Label</h3></span>
-            <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p></span>
-          </article>
+    <div class="card">
+      <div class="label-box" >
+        <div class="zoomed-img">
+          <img src="https://picsum.photos/200" alt="" id="info-image">
         </div>
+        <article class="label-body" id="info-container">
+          <span><h3 id="info-title">Label</h3></span>
+          <span><p id="info-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p></span>
+        </article>
       </div>
-      <div class="card">
-        <div class="label-box" id="label4">
-          <div class="zoomed-img">
-            <img src="https://picsum.photos/200" alt="">
-          </div>
-          <article class="label-body">
-            <span><h3>Label</h3></span>
-            <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p></span>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </div>
 
   <div class="bottom container">
@@ -90,6 +42,6 @@
       <a href="https://www.youtube.com/watch?v=9UJzVLXmBG4" target="_blank" class="button">Watch Video</a>
     </div>
   </div>
-  <script src="script.js"></script>
+
 </body>
 </html>
