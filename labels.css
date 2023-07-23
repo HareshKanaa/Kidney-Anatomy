@@ -56,8 +56,9 @@
   -webkit-box-orient: vertical;
 }
 .card {
-  width: 300px;
+  width: 350px;
   /* display: none; */
   aspect-ratio: 1/1;
+  margin-top: -100px;
 }
 /* Path: labels.css */

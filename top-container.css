@@ -1,11 +1,12 @@
 
+
 .kidney-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 70px;
-  height: 500px;
+  margin-top: 60px;
+  height: 600px;
 }
 
 .kidney-left {
@@ -21,4 +22,23 @@
 .kidney-right {
   height: 100%;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.kidney-right a{
+  text-decoration: none;
+  color: lightcoral;
+  font-weight: 600;
+}
+
+.kidney-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: lightsalmon;
+}
+.kidney-right #ch2 a{
+  color: lightseagreen;
 }

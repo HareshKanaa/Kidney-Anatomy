@@ -6,7 +6,7 @@ const hotspotsInfo = {
   },
   2: {
     title: "Renal Pyramid",
-    description: "Renal pyramid is a conical structure in the kidney, containing nephrons and responsible for urine production and concentration.",
+    description: "The renal pyramid, also known as the medullary pyramid, is a structure found in the inner part of the kidney, specifically within the renal medulla. The kidney typically contains several triangular-shaped renal pyramids, and their base faces the outer region of the kidney, while the apex points inward, towards the renal pelvis. Renal pyramids are composed of nephron loops (loop of Henle) and collecting ducts, which play crucial roles in the process of urine formation.",
     imageLink: "./images/renel pyramid.jpg",
   },
   3: {

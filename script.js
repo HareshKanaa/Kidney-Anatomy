@@ -24,8 +24,22 @@ function showInfo(hotspotNumber) {
       </div>
   `;
   infoContainer.addEventListener('click', () => {
-    
-    window.open("https://en.wikipedia.org/wiki/Kidney", "_blank");
+    const kidneyContainerBottom = document.getElementById('kidney-container-bottom');
+    kidneyContainerBottom.innerHTML = `
+      <div class="kidney-left kidney-bottom">
+        <img src="${hotspotsInfo[hotspotNumber].imageLink}" alt="">
+      </div>
+      <div class="kidney-right">
+        <h1>${hotspotsInfo[hotspotNumber].title}</h1>
+        <h3>Description</h3>
+        <p>${hotspotsInfo[hotspotNumber].description}</p>
+        <h3>Function</h3>
+        <p>${hotspotsInfo[hotspotNumber].function}</p>
+        <h3>Possible Diseases</h3>
+        <p>${hotspotsInfo[hotspotNumber].diseases}</p>
+        
+      </div>
+    `;
   });
 }
 
@@ -34,8 +48,6 @@ const imgContainer = document.getElementsByClassName("image-container")[0];
 const img = document.createElement("img");
 img.src = "images/kidney.png";
 img.className = "kidney";
-img.alt = "Interactive Image";
-img.id = "interactive-image";
 
 imgContainer.appendChild(img);
 
